@@ -1,0 +1,10 @@
+services:
+  qa-api:
+    build: .
+    ports:
+      - "${PORT}:8000"
+    env_file:
+      - .env
+    environment:
+      - MODEL_NAME=${MODEL_NAME}
+      - HF_TOKEN=${HF_TOKEN}
